@@ -1,0 +1,38 @@
+<p>Listado de Héroes </p>
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+<div *ngIf=" heroeBorrado; else noBorrado">
+    <h3>Héroe borrado: <small>{{ heroeBorrado }}</small></h3>
+    <!--<span>{{heroeBorrado}}</span>-->
+</div>
+<ng-template #noBorrado>
+    <h4>No ha borrado nada</h4>
+</ng-template>
+
+<ul>
+    <li *ngFor="let heroe of heroes">
+        {{heroe}}
+    </li>
+</ul>
+
+<br/>
+<p>Listado de Futbolistas</p>
+<ul>
+    <li *ngFor="let jugador of jugadores">
+        {{jugador}}
+    </li>
+</ul>
+<button (click)="borrarJugador()">
+    Borrar
+</button>
+<br/>
+<p>Colores Primarios</p>
+<ul>
+    <li *ngFor="let color of coloresPrimarios">
+        {{color}}
+
+    </li>
+</ul><button (click)="borrarColores()">
+    Borrar
+</button>
